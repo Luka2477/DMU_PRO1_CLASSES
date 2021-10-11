@@ -51,6 +51,10 @@ public class BarChart {
         String maxName = this.findLongest(this.nameList);
         // print out bar chart
         for(int i=0; i<this.list.size(); i++)
-            System.out.println(this.nameList.get(i) + " ".repeat(maxName.length() - this.nameList.get(i).length() + 5) + "*".repeat(40 * this.list.get(i) / max));
+            System.out.println(
+                    this.nameList.get(i)
+                    + " ".repeat(maxName.length() - this.nameList.get(i).length() + 5)
+                    + "*".repeat(40 * this.list.get(i) / max)
+            );
     }
 }
