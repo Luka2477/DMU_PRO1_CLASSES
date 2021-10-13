@@ -1,10 +1,13 @@
 package opgave5;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -50,21 +53,25 @@ public class Gui extends Application {
         pane.add(this.fahrenheit, 1, 0);
         pane.add(this.celcius, 1, 1);
 
-        this.fahrenheit.textProperty().addListener((observable, __, newValue) -> this.celciusAction(newValue));
-        this.celcius.textProperty().addListener((observable, __, newValue) -> this.fahrenheitAction(newValue));
+        this.fahrenheit.setOnKeyPressed(this::celciusAction);
+        this.celcius.setOnKeyPressed(this::fahrenheitAction);
     }
 
     // -------------------------------------------------------------------------
 
-    private void fahrenheitAction(String newValue) {
-        double temp = Double.parseDouble(newValue);
-        if(temp != 0)
-            this.fahrenheit.setText(Double.toString(9 / 5.0 * temp + 32));
+    private void fahrenheitAction(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            double temp = Double.parseDouble(this.celcius.getText());
+            if (temp != 0)
+                this.fahrenheit.setText(Double.toString(9 / 5.0 * temp + 32));
+        }
     }
 
-    private void celciusAction(String newValue) {
-        double temp = Double.parseDouble(newValue);
-        if(temp != 0)
-            this.celcius.setText(Double.toString(5 * (temp - 32) / 9));
+    private void celciusAction(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            double temp = Double.parseDouble(this.fahrenheit.getText());
+            if (temp != 0)
+                this.celcius.setText(Double.toString(5 * (temp - 32) / 9));
+        }
     }
 }
