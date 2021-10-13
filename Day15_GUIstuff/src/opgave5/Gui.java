@@ -61,7 +61,9 @@ public class Gui extends Application {
 
     private void fahrenheitAction(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
-            double temp = Double.parseDouble(this.celcius.getText());
+            double temp = !this.celcius.getText().isEmpty()
+                    ? Double.parseDouble(this.celcius.getText())
+                    : 0;
             if (temp != 0)
                 this.fahrenheit.setText(Double.toString(9 / 5.0 * temp + 32));
         }
@@ -69,7 +71,9 @@ public class Gui extends Application {
 
     private void celciusAction(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
-            double temp = Double.parseDouble(this.fahrenheit.getText());
+            double temp = !this.fahrenheit.getText().isEmpty()
+                    ? Double.parseDouble(this.fahrenheit.getText())
+                    : 0;
             if (temp != 0)
                 this.celcius.setText(Double.toString(5 * (temp - 32) / 9));
         }
