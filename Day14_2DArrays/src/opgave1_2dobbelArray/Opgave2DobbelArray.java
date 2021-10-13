@@ -46,7 +46,7 @@ public class Opgave2DobbelArray {
         // Opgave 2.4 lav ændringer i values så den har skiftende 0'er og 1'er som på et skakbræt
         for(int i=0; i<values.length; i++)
             for(int j=0; j<values[i].length; j++)
-                da.setValueAt(values, i, j, (i % 2 == 0) ? j % 2 : (j + 1) % 2);
+                da.setValueAt(values, i, j, (i + j) % 2);
 
         System.out.println();
         System.out.println("Nedenfor skulle der stå 0 og 1 på alle pladser som på skakbræt");
