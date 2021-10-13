@@ -1,6 +1,5 @@
 package opgave3Teater;
 
-import java.awt.*;
 import java.util.Scanner;
 
 public class TheaterFloorApp {
@@ -23,7 +22,7 @@ public class TheaterFloorApp {
 			System.out.print("Venligst indtaste rækken og sædet du vil side på (1,3): ");
 			String[] seat = scanner.nextLine().split(",");
 			int row = Integer.parseInt(seat[0]);
-			int col = Integer.parseInt(seat[1]);
+			int col = Integer.parseInt(seat[1]) - 1;
 			int result = theater.buySeat(row, col);
 			System.out.println((result == 0) ? "Pladsen på " + row + ", " + col + " er ikke ledig." : "Du har reserveret pladsen på " + row + ", " + col + " til " + result + "kr.");
 		}
