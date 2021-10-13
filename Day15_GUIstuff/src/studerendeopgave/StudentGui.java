@@ -64,7 +64,7 @@ public class StudentGui extends Application {
 
 		pane.add(txfName, 1, 1, 4, 1);
 
-		pane.add(this.txfAge, 1, 2, 2, 1);
+		pane.add(this.txfAge, 1, 2, 3, 1);
 
 		pane.add(chkActive, 1, 3);
 
@@ -86,12 +86,19 @@ public class StudentGui extends Application {
 
 		// connect a method to the button
 
-		this.btnBirthday.setOnAction(event -> this.studerende.increaseAge());
+		this.btnBirthday.setOnAction(event -> this.increaseAge());
 		btnAdd.setOnAction(event -> this.addAction());
 		btnSave.setOnAction(event -> this.saveAction());
 		btnGet.setOnAction(event -> this.getAction());
 		btnDelete.setOnAction(event -> this.deleteAction());
 
+	}
+
+	private void increaseAge() {
+		if (this.studerende != null) {
+			this.studerende.increaseAge();
+			this.txAInf.setText(this.getDescription());
+		}
 	}
 
 	private void addAction() {
@@ -109,10 +116,12 @@ public class StudentGui extends Application {
 	private void saveAction() {
 		if (studerende != null) {
 			studerende.setName(txfName.getText().trim());
+			this.studerende.setAge(Integer.parseInt(this.txfAge.getText()));
 			studerende.setActive(chkActive.isSelected());
 			clearFields();
 			txAInf.setText(getDescription());
 			btnSave.setDisable(true);
+			this.btnBirthday.setDisable(false);
 			btnDelete.setDisable(true);
 			btnGet.setDisable(false);
 
@@ -123,10 +132,12 @@ public class StudentGui extends Application {
 	private void getAction() {
 		if (studerende != null) {
 			txfName.setText(studerende.getName());
+			this.txfAge.setText(Integer.toString(this.studerende.getAge()));
 			chkActive.setSelected(studerende.isActive());
 			txAInf.setText(getDescription());
 			btnSave.setDisable(false);
 			btnDelete.setDisable(false);
+			this.btnBirthday.setDisable(true);
 			btnGet.setDisable(true);
 
 		}
@@ -149,6 +160,7 @@ public class StudentGui extends Application {
 
 	private void clearFields() {
 		txfName.clear();
+		this.txfAge.clear();
 		chkActive.setSelected(false);
 	}
 
