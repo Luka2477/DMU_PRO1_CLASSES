@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
-import java.util.stream.Collector;
 
 public class BarChart {
-    private ArrayList<String> nameList = new ArrayList<>();
-    private ArrayList<Integer> list = new ArrayList<>();
+    private final ArrayList<String> nameList = new ArrayList<>();
+    private final ArrayList<Integer> list = new ArrayList<>();
 
-    public ArrayList<Integer> readValues() {
+    public void readValues() {
         System.out.println("Indtast navn samt nogle positive tal.  " + "Indtast et negativt tal for at afslutte: ");
 
         Scanner in = new Scanner(System.in);
@@ -23,7 +22,6 @@ public class BarChart {
             name = in.nextLine();
             n = Integer.parseInt(in.nextLine());
         }
-        return this.list;
     }
 
     /**
@@ -40,7 +38,7 @@ public class BarChart {
 
 
     public String findLongest(ArrayList<String> nameList) {
-        return Collections.max(this.nameList, Comparator.comparing(String::length));
+        return Collections.max(nameList, Comparator.comparing(String::length));
     }
 
     /**
