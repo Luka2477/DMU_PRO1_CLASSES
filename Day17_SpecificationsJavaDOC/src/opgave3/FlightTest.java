@@ -1,4 +1,4 @@
-package model;
+package opgave3;
 
 import java.time.LocalDateTime;
 
