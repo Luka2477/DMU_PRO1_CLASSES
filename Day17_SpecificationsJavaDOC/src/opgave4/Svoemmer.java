@@ -58,7 +58,7 @@ public class Svoemmer{
      * Pre: Der er registreret mindst to tider for svømmeren
      */
     public double bedsteTid () {
-        return this.tider.stream().mapToDouble(tid -> tid).min().orElse(0.0);
+        return this.tider.stream().mapToDouble(Double::doubleValue).min().orElse(0.0);
     }
 
     /**
@@ -68,7 +68,7 @@ public class Svoemmer{
      */
 
     public double gennemsnitAfTid () {
-        return this.tider.stream().mapToDouble(tid -> tid).average().orElse(0.0);
+        return this.tider.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
     }
 
     /**
@@ -78,8 +78,8 @@ public class Svoemmer{
      */
     public double snitUdenDaarligste () {
         ArrayList<Double> temp = new ArrayList<>(this.tider);
-        temp.remove(temp.stream().mapToDouble(tid -> tid).max().orElse(0.0));
-        return temp.stream().mapToDouble(tid -> tid).average().orElse(0.0);
+        temp.remove(temp.stream().mapToDouble(Double::doubleValue).max().orElse(0.0));
+        return temp.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
     }
 }
 
