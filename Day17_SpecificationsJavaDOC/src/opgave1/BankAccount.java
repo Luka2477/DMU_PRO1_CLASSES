@@ -5,15 +5,19 @@ package opgave1;
  */
 public class BankAccount {
     private double balance;
+    private final int id;
+    private static int idCount;
 
     /**
-     * Initializes a new bank account with initial balance.
+     * Initializes a new bank account with initial balance and generates an ID.
      * Pre: initialBalance >= 0
      *
      * @param initialBalance is the initial balance of the bank account
      */
     public BankAccount (double initialBalance) {
         this.balance = initialBalance;
+        this.id = BankAccount.idCount;
+        BankAccount.idCount++;
     }
 
     /**
@@ -40,6 +44,24 @@ public class BankAccount {
      * @return the bank accounts balance
      */
     public double getBalance () {
-        return balance;
+        return this.balance;
+    }
+
+    /**
+     * Returns the bank accounts ID.
+     *
+     * @return the bank accounts ID
+     */
+    public int getId() {
+        return this.id;
+    }
+
+    /**
+     * Returns the amount of bank accounts initialized.
+     *
+     * @return the amount of bank accounts initialized
+     */
+    public static int getIdCount() {
+        return BankAccount.idCount;
     }
 }
