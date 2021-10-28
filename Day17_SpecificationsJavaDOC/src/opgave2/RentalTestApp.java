@@ -32,8 +32,12 @@ public class RentalTestApp {
                 mercedesC350.getStartDate().minusDays(1));
 
         Period dateDiff = audiA4.getStartDate().until(mercedesC350.getStartDate());
-        System.out.printf("Years: %d | Months: %d | days: %d%n", dateDiff.getYears(), dateDiff.getMonths(), dateDiff.getDays());
+        System.out.printf("Years: %d | Months: %d | days: %d%n",
+                dateDiff.getYears(),
+                dateDiff.getMonths(),
+                dateDiff.getDays());
 
-        System.out.printf("Days between rentals: %d", ChronoUnit.DAYS.between(audiA4.getStartDate(), mercedesC350.getStartDate()));
+        System.out.printf("Days between rentals: %d",
+                ChronoUnit.DAYS.between(audiA4.getStartDate(), mercedesC350.getStartDate()));
     }
 }
