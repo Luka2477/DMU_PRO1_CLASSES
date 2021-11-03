@@ -43,4 +43,8 @@ public class Series {
     public ArrayList<Episode> getEpisodes () {
         return new ArrayList<>(this.episodes);
     }
+
+    public int totalLength () {
+        return this.episodes.stream().mapToInt(Episode::getLength).sum();
+    }
 }
