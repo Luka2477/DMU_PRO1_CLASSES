@@ -82,4 +82,3 @@ public class Svoemmer{
         return temp.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
     }
 }
-
