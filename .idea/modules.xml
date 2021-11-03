@@ -17,7 +17,9 @@
       <module fileurl="file://$PROJECT_DIR$/Day15_GUIstuff/Day15_GUIstuff.iml" filepath="$PROJECT_DIR$/Day15_GUIstuff/Day15_GUIstuff.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day16_MoreGUIstuff/Day16_MoreGUIstuff.iml" filepath="$PROJECT_DIR$/Day16_MoreGUIstuff/Day16_MoreGUIstuff.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day17_SpecificationsJavaDOC/Day17_SpecificationsJavaDOC.iml" filepath="$PROJECT_DIR$/Day17_SpecificationsJavaDOC/Day17_SpecificationsJavaDOC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day20_ConnectionsBetweenClasses1/Day20_ConnectionsBetweenClasses1.iml" filepath="$PROJECT_DIR$/Day20_ConnectionsBetweenClasses1/Day20_ConnectionsBetweenClasses1.iml" />
       <module fileurl="file://$PROJECT_DIR$/PRO_BookExercises/PRO_BookExercises.iml" filepath="$PROJECT_DIR$/PRO_BookExercises/PRO_BookExercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TMP_ConnectionsUniDirectional/TMP_ConnectionsUniDirectional.iml" filepath="$PROJECT_DIR$/TMP_ConnectionsUniDirectional/TMP_ConnectionsUniDirectional.iml" />
     </modules>
   </component>
 </project>
