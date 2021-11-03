@@ -101,7 +101,7 @@ public class Flight {
      * @return list of passengers
      */
     public ArrayList<Passenger> getPassengers () {
-        return this.passengers;
+        return new ArrayList<>(this.passengers);
     }
     
     /**
@@ -110,7 +110,7 @@ public class Flight {
      * @return how many hours
      */
     public double flightDurationInHours() {
-        return ChronoUnit.MINUTES.between(this.departDate, this.arrivalDate) / 60.0;
+        return ChronoUnit.SECONDS.between(this.departDate, this.arrivalDate) / 60.0 / 60.0;
     }
     
     /**
