@@ -1,4 +1,6 @@
-package model;
+package opgave2;
+
+import java.util.ArrayList;
 
 /**
  * Models a training plan for a Swimmer
@@ -7,6 +9,8 @@ public class TrainingPlan {
 	private char level;
 	private int weeklyWaterHours;
 	private int weeklyStrengthHours;
+
+	private final ArrayList<Swimmer> swimmers = new ArrayList<>();
 	
 	public TrainingPlan(char level, int weeklyWaterHours, int weeklyStrengthHours) {
 		this.level = level;
@@ -37,5 +41,18 @@ public class TrainingPlan {
 	public void setWeeklyWaterHours(int weeklyWaterHours) {
 		this.weeklyWaterHours = weeklyWaterHours;
 	}
-	
+
+	public void addSwimmer (Swimmer swimmer) {
+		if (!this.swimmers.contains(swimmer)) {
+			this.swimmers.add(swimmer);
+		}
+	}
+
+	public void removeSwimmer (Swimmer swimmer) {
+		this.swimmers.remove(swimmer);
+	}
+
+	public ArrayList<Swimmer> getSwimmers () {
+		return new ArrayList<>(this.swimmers);
+	}
 }
