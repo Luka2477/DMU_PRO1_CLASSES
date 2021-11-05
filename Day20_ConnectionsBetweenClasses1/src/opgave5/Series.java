@@ -46,6 +46,14 @@ public class Series {
 
     public int totalLength () {
         return this.episodes.stream().mapToInt(Episode::getLength).sum();
+
+        /*
+        int sum = 0;
+        for (Episode episode : this.episodes) {
+            sum += episode.getLength();
+        }
+        return sum;
+        */
     }
 
     public ArrayList<String> getGuestActors () {
