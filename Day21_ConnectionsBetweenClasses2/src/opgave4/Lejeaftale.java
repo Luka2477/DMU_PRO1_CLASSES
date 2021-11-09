@@ -12,7 +12,7 @@ public class Lejeaftale {
 
     private ArrayList<Lejer> lejere = new ArrayList<>();
 
-    public Lejeaftale (LocalDate fraDato, Bolig bolig) {
+    Lejeaftale (LocalDate fraDato, Bolig bolig) {
         this.fraDato = fraDato;
 
         this.bolig = bolig;
