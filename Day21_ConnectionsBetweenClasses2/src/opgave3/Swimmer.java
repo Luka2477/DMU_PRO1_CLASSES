@@ -70,6 +70,12 @@ public class Swimmer {
         return this.trainingPlan;
     }
 
+    /**
+     * Set the training plan of the swimmer.
+     * Pre: trainingPlan != null
+     *
+     * @param trainingPlan the plan to be set
+     */
     public void setTrainingPlan (TrainingPlan trainingPlan) {
         if (this.trainingPlan != trainingPlan) {
             this.trainingPlan = trainingPlan;
