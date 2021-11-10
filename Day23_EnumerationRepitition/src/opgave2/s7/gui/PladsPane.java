@@ -53,18 +53,15 @@ public class PladsPane extends Application {
         Label lblOmraade = new Label("Område:");
         pane.add(lblOmraade, 0, 2);
 
-        String[] radioButtonLabels = {"Standard", "VIP", "Børne", "Turnering"};
-        Omraade[] radioButtonValues = {Omraade.STANDARD, Omraade.VIP, Omraade.BOERNE, Omraade.TURNERING};
-
         this.tglGroup = new ToggleGroup();
 
         VBox vBox = new VBox();
         pane.add(vBox, 2, 2);
 
-        for (int i=0; i<radioButtonLabels.length; i++) {
+        for (Omraade omraade : Omraade.values()) {
             RadioButton rdoButton = new RadioButton();
-            rdoButton.setText(radioButtonLabels[i]);
-            rdoButton.setUserData(radioButtonValues[i]);
+            rdoButton.setText(omraade.toString());
+            rdoButton.setUserData(omraade);
             rdoButton.setToggleGroup(this.tglGroup);
             vBox.getChildren().add(rdoButton);
         }
