@@ -81,7 +81,7 @@ public class PladsPane extends Application {
 
         this.lblError = new Label();
         this.lblError.setStyle("-fx-text-fill: red;");
-        pane.add(this.lblError, 0, 5, 2, 1);
+        pane.add(this.lblError, 0, 5, 3, 1);
     }
 
     // -----------------------------------------------------------------------------------
