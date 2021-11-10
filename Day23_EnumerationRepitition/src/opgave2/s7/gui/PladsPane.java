@@ -48,7 +48,7 @@ public class PladsPane extends Application {
         this.lvwPladser = new ListView<>();
         this.lvwPladser.setPrefSize(200, 300);
         this.lvwPladser.getItems().setAll(Controller.getPladser());
-        pane.add(this.lvwPladser, 0, 1, 2, 1);
+        pane.add(this.lvwPladser, 0, 1, 3, 1);
 
         Label lblOmraade = new Label("Område:");
         pane.add(lblOmraade, 0, 2);
@@ -59,7 +59,7 @@ public class PladsPane extends Application {
         this.tglGroup = new ToggleGroup();
 
         VBox vBox = new VBox();
-        pane.add(vBox, 1, 2);
+        pane.add(vBox, 2, 2);
 
         for (int i=0; i<radioButtonLabels.length; i++) {
             RadioButton rdoButton = new RadioButton();
@@ -73,7 +73,7 @@ public class PladsPane extends Application {
         pane.add(lblNummer, 0, 3);
 
         this.txfNummer = new TextField();
-        pane.add(txfNummer, 1, 3);
+        pane.add(txfNummer, 1, 3, 2, 1);
 
         Button btnOpret = new Button("Opret");
         btnOpret.setOnAction(event -> this.opretAction());
