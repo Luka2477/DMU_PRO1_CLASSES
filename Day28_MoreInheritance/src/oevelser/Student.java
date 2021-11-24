@@ -1,6 +1,4 @@
-package oevelse1;
-
-import java.util.BitSet;
+package oevelser;
 
 public class Student extends Person {
 

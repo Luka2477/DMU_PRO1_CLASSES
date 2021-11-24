@@ -1,4 +1,4 @@
-package oevelse1;
+package oevelser;
 
 public class App {
     public static void main(String[] args) {
