@@ -77,4 +77,9 @@ public class PersonChip {
         return this.maxSaldo - samledePris - prisFacilitet >= 0;
     }
 
+    @Override
+    public String toString () {
+        return String.format("Nr: %d | Navn: %s | Maxsaldo: %d", this.nr, this.navn, this.maxSaldo);
+    }
+
 }

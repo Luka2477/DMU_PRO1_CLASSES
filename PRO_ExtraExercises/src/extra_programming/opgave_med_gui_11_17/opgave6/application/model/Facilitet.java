@@ -58,4 +58,9 @@ public class Facilitet {
         return new ArrayList<>(this.personChips);
     }
 
+    @Override
+    public String toString () {
+        return String.format("Navn: %s | Pris: %d", this.navn, this.pris);
+    }
+
 }

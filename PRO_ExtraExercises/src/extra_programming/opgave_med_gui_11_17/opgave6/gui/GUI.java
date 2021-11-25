@@ -5,6 +5,9 @@ import extra_programming.opgave_med_gui_11_17.opgave6.application.model.Facilite
 import extra_programming.opgave_med_gui_11_17.opgave6.application.model.Gruppe;
 import extra_programming.opgave_med_gui_11_17.opgave6.application.model.PersonChip;
 import javafx.application.Application;
+import javafx.beans.Observable;
+import javafx.beans.value.ChangeListener;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -57,6 +60,7 @@ public class GUI extends Application {
 
         Button btnOpretGruppe = new Button("Opret gruppe");
         btnOpretGruppe.setOnAction(event -> this.opretGruppeAction());
+        GridPane.setHalignment(btnOpretGruppe, HPos.CENTER);
         pane.add(btnOpretGruppe, 0, 2, 2, 1);
 
         Label lblPerson = new Label("Person:");
@@ -82,6 +86,7 @@ public class GUI extends Application {
 
         Button btnAddPerson = new Button("Tilføj person til gruppe");
         btnAddPerson.setOnAction(event -> this.addPersonAction());
+        GridPane.setHalignment(btnAddPerson, HPos.CENTER);
         pane.add(btnAddPerson, 0, 7, 2, 1);
 
         this.lblError = new Label();
@@ -104,6 +109,7 @@ public class GUI extends Application {
 
         Button btnAddFacilitetToPerson = new Button("Person bruger facilitet");
         btnAddFacilitetToPerson.setOnAction(event -> this.addFacilitetToPersonAction());
+        GridPane.setHalignment(btnAddFacilitetToPerson, HPos.CENTER);
         pane.add(btnAddFacilitetToPerson, 2, 9);
 
         this.updateControls();
@@ -169,7 +175,18 @@ public class GUI extends Application {
     }
 
     private void addFacilitetToPersonAction () {
+        PersonChip personChip = this.lvwPersonChips.getSelectionModel().getSelectedItem();
+        Facilitet facilitet = this.lvwFaciliteter.getSelectionModel().getSelectedItem();
 
+        if (personChip != null) {
+            if (facilitet != null) {
+                personChip.addFacilitet(facilitet);
+            } else {
+                this.lblError.setText("Venligst vælge et facilitet.");
+            }
+        } else {
+            this.lblError.setText("Venligst vælge en person.");
+        }
     }
 
     private void updateControls () {
