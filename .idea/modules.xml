@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DMU_PRO1_CLASSES.iml" filepath="$PROJECT_DIR$/.idea/DMU_PRO1_CLASSES.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Dag02_JavaFXStuff/Dag02_JavaFXStuff.iml" filepath="$PROJECT_DIR$/Dag02_JavaFXStuff/Dag02_JavaFXStuff.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day01_SimplePrograms/Day01_SimplePrograms.iml" filepath="$PROJECT_DIR$/Day01_SimplePrograms/Day01_SimplePrograms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day02_JavaFXStuff/Day02_JavaFXStuff.iml" filepath="$PROJECT_DIR$/Day02_JavaFXStuff/Day02_JavaFXStuff.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day03_ClassesAndStuff/Day03_ClassesAndStuff.iml" filepath="$PROJECT_DIR$/Day03_ClassesAndStuff/Day03_ClassesAndStuff.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day04_MoreClassesAndStuff/Day04_MoreClassesAndStuff.iml" filepath="$PROJECT_DIR$/Day04_MoreClassesAndStuff/Day04_MoreClassesAndStuff.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day05_StringStuff/Day05_StringStuff.iml" filepath="$PROJECT_DIR$/Day05_StringStuff/Day05_StringStuff.iml" />
