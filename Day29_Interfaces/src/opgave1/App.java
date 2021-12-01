@@ -15,7 +15,7 @@ public class App {
     }
 
     public static Measurable max (Measurable[] objects) {
-        double max = 0.0;
+        double max = Double.MIN_VALUE;
         Measurable maxMeasurable = null;
         for (Measurable measurable : objects) {
             if (measurable.getMeasure() > max) {
