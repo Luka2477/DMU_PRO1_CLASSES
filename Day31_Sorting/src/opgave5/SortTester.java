@@ -1,6 +1,7 @@
 package opgave5;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class SortTester {
 
@@ -35,6 +36,12 @@ public class SortTester {
         Measurer.stop();
         m1.addMeasurement("selectionSort", Measurer.durationMilliSeconds());
 
+        // Collections.sort Test
+        Measurer.start();
+        Collections.sort(bigList);
+        Measurer.stop();
+        m1.addMeasurement("collectionSort", Measurer.durationMilliSeconds());
+
         testSize = 15000;
         bigList = ListGenerator.generateString(testSize, 15);
         bigArray1 = bigList.toArray(new String[0]);
@@ -61,6 +68,12 @@ public class SortTester {
         SortMethods.selectionSort(bigArray3);
         Measurer.stop();
         m2.addMeasurement("selectionSort", Measurer.durationMilliSeconds());
+
+        // Collections.sort Test
+        Measurer.start();
+        Collections.sort(bigList);
+        Measurer.stop();
+        m2.addMeasurement("collectionSort", Measurer.durationMilliSeconds());
 
         testSize = 5000;
         bigList = ListGenerator.generateString(testSize, 15);
@@ -89,7 +102,15 @@ public class SortTester {
         Measurer.stop();
         m3.addMeasurement("selectionSort", Measurer.durationMilliSeconds());
 
-        System.out.println(measurements);
+        // Collections.sort Test
+        Measurer.start();
+        Collections.sort(bigList);
+        Measurer.stop();
+        m3.addMeasurement("collectionSort", Measurer.durationMilliSeconds());
+
+        for (Measurement measurement : measurements) {
+            System.out.println(measurement);
+        }
 
     }
 

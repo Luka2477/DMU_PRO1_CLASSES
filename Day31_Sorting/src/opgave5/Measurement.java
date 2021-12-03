@@ -22,7 +22,7 @@ public class Measurement {
     public String toString () {
         StringBuilder returnStr = new StringBuilder(String.format("Test size: %d%n", this.testSize));
         for (int i = 0; i < this.measurementNames.size(); i++) {
-            returnStr.append(String.format("%15s -- Total time in milliseconds: %4d | Milliseconds per element: %.4f%n",
+            returnStr.append(String.format("%14s -- Total time in milliseconds: %4d | Milliseconds per element: %.5f%n",
                     this.measurementNames.get(i).toUpperCase(),
                     this.measurements.get(i),
                     (double) this.measurements.get(i) / this.testSize));
