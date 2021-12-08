@@ -24,6 +24,7 @@ public abstract class FilUtil {
             }
         }
 
+        scanner.close();
         return max;
     }
 
@@ -39,6 +40,7 @@ public abstract class FilUtil {
             }
         }
 
+        scanner.close();
         return min;
     }
 
@@ -52,6 +54,7 @@ public abstract class FilUtil {
             count++;
         }
 
+        scanner.close();
         return (double) sum / count;
     }
 
