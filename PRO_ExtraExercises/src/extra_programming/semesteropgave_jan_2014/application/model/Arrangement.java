@@ -1,6 +1,7 @@
 package extra_programming.semesteropgave_jan_2014.application.model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
@@ -113,6 +114,13 @@ public class Arrangement {
         }
 
         return event;
+    }
+
+    //------------------------------------------------------------------------------------------------------------------
+
+    @Override
+    public String toString () {
+        return this.navn + " | " + this.ansvarlig + "\n" + this.premiereDato.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + " | " + this.pris;
     }
 
 }

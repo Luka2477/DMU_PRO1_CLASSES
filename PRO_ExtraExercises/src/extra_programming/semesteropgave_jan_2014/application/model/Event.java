@@ -104,4 +104,9 @@ public class Event implements Comparable<Event> {
         return comp;
     }
 
+    @Override
+    public String toString () {
+        return this.navn;
+    }
+
 }
