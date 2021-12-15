@@ -40,7 +40,6 @@ public class App {
                 result.add(l1.get(i1));
                 i1++;
             } else {
-                result.add(l1.get(i1));
                 i2++;
             }
         }
