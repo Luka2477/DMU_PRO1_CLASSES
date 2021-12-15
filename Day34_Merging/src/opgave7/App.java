@@ -22,7 +22,7 @@ public class App {
                 String[] split = scanner.nextLine().split(" ");
 
                 if (split[2].equals(target)) {
-                    result = String.join(" ", split);
+                    result = split[1] + " " + split[2];
                 }
             }
         } catch (FileNotFoundException ex) {
