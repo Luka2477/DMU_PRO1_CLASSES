@@ -34,8 +34,8 @@ public class App {
                 }
             }
 
-            writer.println(next1);
-            writer.println(next2);
+            writer.println(Math.max(next1, next2));
+            writer.println(Math.min(next1, next2));
 
             if (scanner1.hasNextInt()) {
                 while (scanner1.hasNextInt()) {
