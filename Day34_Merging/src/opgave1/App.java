@@ -14,7 +14,8 @@ public class App {
                 new Customer("Per", 59),
                 new Customer("Jeppe", 24),
                 new Customer("Omar", 19),
-                new Customer("Sidsel", 30)
+                new Customer("Sidsel", 30),
+                new Customer("Morten", 26)
         ));
         customers1.sort(Customer::compareTo);
         ArrayList<Customer> customers2 = new ArrayList<>(Arrays.asList(

@@ -34,4 +34,41 @@ public class App {
         return resultList.toArray(new Integer[0]);
     }
 
+    public static Integer[] fletUdenDuplicates (int[] l1, int[] l2) {
+        ArrayList<Integer> resultList = new ArrayList<>();
+        int i1 = 0, i2 = 0;
+
+        while (i1 < l1.length && i2 < l2.length) {
+            if (l1[i1] < l2[i2]) {
+                if (!resultList.contains(l1[i1])) {
+                    resultList.add(l1[i1]);
+                }
+                i1++;
+            } else if (l1[i1] > l2[i2]) {
+                if (!resultList.contains(l2[i2])) {
+                    resultList.add(l2[i2]);
+                }
+                i2++;
+            } else {
+                if (!resultList.contains(l1[i1])) {
+                    resultList.add(l1[i1]);
+                }
+                i1++;
+                i2++;
+            }
+        }
+
+        if (i1 < l1.length) {
+            for (; i1 < l1.length; i1++) {
+                resultList.add(l1[i1]);
+            }
+        } else if (i2 < l2.length) {
+            for (; i2 < l2.length; i2++) {
+                resultList.add(l2[i2]);
+            }
+        }
+
+        return resultList.toArray(new Integer[0]);
+    }
+
 }
