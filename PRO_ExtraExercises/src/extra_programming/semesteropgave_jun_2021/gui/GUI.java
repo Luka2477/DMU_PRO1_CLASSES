@@ -148,11 +148,8 @@ public class GUI extends Application {
             LocalDate dato = LocalDate.parse(this.txfDato.getText().trim());
             LocalTime tid = LocalTime.parse(this.txfTid.getText().trim());
 
-            Kamp kamp = Controller.createKamp(sted, dato, tid);
-            this.clearControls();
-            this.clearKampe();
-            this.updateKampe();
-            this.kampSelected(kamp);
+            this.kamp = Controller.createKamp(sted, dato, tid);
+            this.lvwKampe.getItems().add(this.kamp);
         }
     }
 
@@ -163,11 +160,7 @@ public class GUI extends Application {
             LocalTime tid = LocalTime.parse(this.txfTid.getText().trim());
 
             Controller.updateKamp(this.kamp, sted, dato, tid);
-            Kamp kamp = this.kamp;
-            this.clearControls();
-            this.clearKampe();
-            this.updateKampe();
-            this.kampSelected(kamp);
+            this.lvwKampe.getItems().set(this.lvwKampe.getSelectionModel().getSelectedIndex(), this.kamp);
         }
     }
 
