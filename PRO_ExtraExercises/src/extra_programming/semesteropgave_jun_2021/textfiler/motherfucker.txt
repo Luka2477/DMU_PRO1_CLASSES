@@ -1,0 +1,4 @@
+Peter Jensen | 10.00
+Lars Hansen | 10.00
+Morten Petersen | 10.00
+Janus Nielsen | 120.00
